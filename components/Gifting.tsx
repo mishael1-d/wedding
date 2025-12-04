@@ -64,78 +64,172 @@ export default function Gifting() {
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gold/20 max-w-md mx-auto"
-        >
-          <h3 className="font-serif text-2xl text-navy-blue mb-8 border-b border-gray-100 pb-4">
-            Account Details
-          </h3>
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {/* Groom's Account */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-white p-8 rounded-2xl shadow-xl border border-gold/20"
+          >
+            <h3 className="font-serif text-xl text-navy-blue mb-6 border-b border-gray-100 pb-4 text-center">
+              Groom's Account
+            </h3>
 
-          <div className="space-y-6 text-left">
-            <div>
-              <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">
-                Bank Name
-              </p>
-              <p className="font-serif text-xl text-navy-blue font-bold">
-                [Bank Name]
-              </p>
-            </div>
-
-            <div>
-              <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">
-                Account Name
-              </p>
-              <p className="font-serif text-xl text-navy-blue font-bold">
-                Somtochukwu Joseph
-              </p>
-            </div>
-
-            <div>
-              <p className="text-sm text-gray-500 uppercase tracking-widest mb-1">
-                Account Number
-              </p>
-              <div className="flex items-center gap-3">
-                <p className="font-serif text-2xl text-gold font-bold tracking-wider">
-                  0123456789
+            <div className="space-y-4 text-left">
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">
+                  Bank Name
                 </p>
-                <div className="relative">
-                  <button
-                    onClick={() => handleCopy("0123456789")}
-                    className="text-gray-400 hover:text-navy-blue transition-colors text-sm focus:outline-none"
-                    title="Copy to clipboard"
-                  >
-                    (Copy)
-                  </button>
-                  <AnimatePresence>
-                    {copyStatus === "copied" && (
-                      <motion.span
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: -20 }}
-                        exit={{ opacity: 0 }}
-                        className="absolute left-1/2 -translate-x-1/2 -top-2 bg-navy-blue text-black text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap"
-                      >
-                        Copied!
-                      </motion.span>
-                    )}
-                    {copyStatus === "error" && (
-                      <motion.span
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: -20 }}
-                        exit={{ opacity: 0 }}
-                        className="absolute left-1/2 -translate-x-1/2 -top-2 bg-red-500 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap"
-                      >
-                        Failed to copy
-                      </motion.span>
-                    )}
-                  </AnimatePresence>
+                <p className="font-serif text-lg text-navy-blue font-bold">
+                  Zenith Bank
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">
+                  Account Name
+                </p>
+                <p className="font-serif text-base text-navy-blue font-bold">
+                  Onwukaife Somtochukwu Joseph
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">
+                  Account Number
+                </p>
+                <div className="flex items-center gap-3">
+                  <p className="font-serif text-xl text-gold font-bold tracking-wider">
+                    2178450979
+                  </p>
+                  <div className="relative">
+                    <button
+                      onClick={() => handleCopy("2178450979")}
+                      className="text-gray-400 hover:text-navy-blue transition-colors text-sm focus:outline-none"
+                      title="Copy to clipboard"
+                    >
+                      (Copy)
+                    </button>
+                    <AnimatePresence>
+                      {copyStatus === "copied" && (
+                        <motion.span
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: -20 }}
+                          exit={{ opacity: 0 }}
+                          className="absolute left-1/2 -translate-x-1/2 -top-2 bg-navy-blue text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap"
+                        >
+                          Copied!
+                        </motion.span>
+                      )}
+                      {copyStatus === "error" && (
+                        <motion.span
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: -20 }}
+                          exit={{ opacity: 0 }}
+                          className="absolute left-1/2 -translate-x-1/2 -top-2 bg-red-500 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap"
+                        >
+                          Failed to copy
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
+
+          {/* Bride's Account */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="bg-white p-8 rounded-2xl shadow-xl border border-gold/20"
+          >
+            <h3 className="font-serif text-xl text-navy-blue mb-6 border-b border-gray-100 pb-4 text-center">
+              Bride's Account
+            </h3>
+
+            <div className="space-y-4 text-left">
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">
+                  Bank Name
+                </p>
+                <p className="font-serif text-lg text-navy-blue font-bold">
+                  Zenith Bank
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">
+                  Account Name
+                </p>
+                <p className="font-serif text-base text-navy-blue font-bold">
+                  Ewuruje Gloria Ese-Oghene
+                </p>
+              </div>
+
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-widest mb-1">
+                  Account Number
+                </p>
+                <div className="flex items-center gap-3">
+                  <p className="font-serif text-xl text-gold font-bold tracking-wider">
+                    2119488971
+                  </p>
+                  <div className="relative">
+                    <button
+                      onClick={() => handleCopy("2119488971")}
+                      className="text-gray-400 hover:text-navy-blue transition-colors text-sm focus:outline-none"
+                      title="Copy to clipboard"
+                    >
+                      (Copy)
+                    </button>
+                    <AnimatePresence>
+                      {copyStatus === "copied" && (
+                        <motion.span
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: -20 }}
+                          exit={{ opacity: 0 }}
+                          className="absolute left-1/2 -translate-x-1/2 -top-2 bg-navy-blue text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap"
+                        >
+                          Copied!
+                        </motion.span>
+                      )}
+                      {copyStatus === "error" && (
+                        <motion.span
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: -20 }}
+                          exit={{ opacity: 0 }}
+                          className="absolute left-1/2 -translate-x-1/2 -top-2 bg-red-500 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap"
+                        >
+                          Failed to copy
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-16"
+        >
+          <p className="font-script text-4xl md:text-5xl text-navy-blue mb-4">
+            Thank You!
+          </p>
+          <p className="font-serif text-lg text-gray-600 italic">
+            For your love, prayers, and support as we begin our journey
+            together.
+          </p>
         </motion.div>
       </div>
     </section>

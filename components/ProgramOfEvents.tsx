@@ -135,6 +135,22 @@ There shall be seasons refreshing
 If we let God have His way
 CHORUS`,
   },
+  {
+    title: "Reception",
+    desc: "Program for the Reception",
+    receptionProgram: [
+      "Recognition of Guests",
+      "Introduction of Couple's Families",
+      "Arrival of Couple",
+      "Opening Prayer",
+      "Cutting of Cake",
+      "Games",
+      "First Dance",
+      "Open Floor Dance",
+      "Vote of Thanks - Couple",
+      "Closing Prayer",
+    ],
+  },
 ];
 
 export default function ProgramOfEvents() {
@@ -183,11 +199,13 @@ export default function ProgramOfEvents() {
             >
               <div
                 className={`flex items-center gap-4 md:gap-8 cursor-pointer ${
-                  item.lyrics
+                  item.lyrics || item.receptionProgram
                     ? "hover:bg-white/5 rounded-lg p-2 transition-colors"
                     : ""
                 }`}
-                onClick={() => item.lyrics && toggleLyrics(index)}
+                onClick={() =>
+                  (item.lyrics || item.receptionProgram) && toggleLyrics(index)
+                }
               >
                 <div className="w-12 h-12 md:w-16 md:h-16 flex-shrink-0 rounded-full border border-gold/30 flex items-center justify-center text-gold font-serif text-lg md:text-xl group-hover:bg-gold group-hover:text-deep-green transition-colors duration-300">
                   {index + 1}
@@ -201,8 +219,13 @@ export default function ProgramOfEvents() {
                           Lyrics
                         </span>
                       )}
+                      {item.receptionProgram && (
+                        <span className="ml-2 text-xs text-gold border border-gold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                          Details
+                        </span>
+                      )}
                     </h3>
-                    {item.lyrics && (
+                    {(item.lyrics || item.receptionProgram) && (
                       <span
                         className="text-gold text-xl transform transition-transform duration-300"
                         style={{
@@ -235,6 +258,28 @@ export default function ProgramOfEvents() {
                   >
                     <div className="pl-16 md:pl-24 pr-4 py-4 text-white/80 font-serif whitespace-pre-line leading-relaxed">
                       {item.lyrics}
+                    </div>
+                  </motion.div>
+                )}
+                {expandedIndex === index && item.receptionProgram && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="pl-16 md:pl-24 pr-4 py-4">
+                      <ol className="space-y-2 text-white/80 font-serif">
+                        {item.receptionProgram.map((programItem, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <span className="text-gold font-bold">
+                              {idx + 1}.
+                            </span>
+                            <span>{programItem}</span>
+                          </li>
+                        ))}
+                      </ol>
                     </div>
                   </motion.div>
                 )}
