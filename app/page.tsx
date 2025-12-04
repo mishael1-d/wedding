@@ -1,7 +1,8 @@
 import Hero from "@/components/Hero";
 import EventDetails from "@/components/EventDetails";
 import About from "@/components/About";
-import ProgramDownload from "@/components/ProgramDownload";
+import ProgramOfEvents from "@/components/ProgramOfEvents";
+import Gifting from "@/components/Gifting";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -10,7 +11,8 @@ export default function Home() {
       <Hero />
       <EventDetails />
       <About />
-      <ProgramDownload />
+      <ProgramOfEvents />
+      <Gifting />
       <Footer />
     </main>
   );
