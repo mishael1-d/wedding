@@ -44,8 +44,7 @@ export default function About() {
               The Bride
             </p>
             <p className="text-gray-600 leading-relaxed max-w-md font-serif">
-              Gloria loves coffee, rainy days, and Joseph's terrible jokes. She
-              can't wait to start their greatest adventure yet.
+              Ese loves listening to music on a cool rainy day. She also enjoys laughing at Joseph's terrible jokes. She can't wait to start their greatest adventure yet.
             </p>
           </motion.div>
 
@@ -72,7 +71,7 @@ export default function About() {
               The Groom
             </p>
             <p className="text-gray-600 leading-relaxed max-w-md font-serif">
-              Joseph is an avid hiker, amateur chef, and Gloria's biggest fan.
+              Joseph loves taking calm walks, listening to good audio tunes, amateur chef, and Gloria's biggest fan.
               He's ready to say "I do" to his best friend.
             </p>
           </motion.div>

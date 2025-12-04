@@ -300,6 +300,7 @@ export default function ProgramOfEvents() {
           </h3>
           <p className="font-serif text-lg text-white/80">Pastor Chibuzo Eze</p>
           <p className="font-serif text-lg text-white/80">Pastor Pankan Eze</p>
+          <p className="font-serif text-lg text-white/80">Pastor Poju Oyemade</p>
         </motion.div>
       </div>
     </section>
