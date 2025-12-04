@@ -31,7 +31,7 @@ export default function About() {
           >
             <div className="relative w-64 h-80 mb-8 rounded-full overflow-hidden shadow-xl border-4 border-gold/30">
               <Image
-                src="/bride.svg"
+                src="/Ese.jpeg"
                 alt="Gloria"
                 fill
                 className="object-cover"
@@ -59,7 +59,7 @@ export default function About() {
           >
             <div className="relative w-64 h-80 mb-8 rounded-full overflow-hidden shadow-xl border-4 border-gold/30">
               <Image
-                src="/groom.svg"
+                src="/Somto.jpeg"
                 alt="Joseph"
                 fill
                 className="object-cover"
