@@ -298,9 +298,9 @@ export default function ProgramOfEvents() {
           <h3 className="font-serif text-2xl text-gold mb-4">
             Officiating Ministers
           </h3>
+          <p className="font-serif text-lg text-white/80">Pastor Poju Oyemade</p>
           <p className="font-serif text-lg text-white/80">Pastor Chibuzo Eze</p>
           <p className="font-serif text-lg text-white/80">Pastor Pankan Eze</p>
-          <p className="font-serif text-lg text-white/80">Pastor Poju Oyemade</p>
         </motion.div>
       </div>
     </section>

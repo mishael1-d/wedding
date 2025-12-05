@@ -20,7 +20,7 @@ export default function EventDetails() {
             The Ceremony
           </h2>
           <p className="font-serif text-xl text-gray-600 max-w-md mx-auto leading-relaxed">
-            Cenon Event Centre, 166 Bakori Rd,
+            Cenon Pavilion, 181 Bakori Rd,
             <br />
             PW, Abuja 901101,
             <br />
